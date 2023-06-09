@@ -12,6 +12,15 @@ public class MapGenerator : MonoBehaviour
     private List<GameObject> mapTiles = new List<GameObject>();
     private List<GameObject> pathTiles = new List<GameObject>();
 
+    private bool reachedX = false;
+    private bool reachedY = false;
+
+    private GameObject currentTile;
+    private int currentIndex;
+    private int nextIndex;
+
+    public Color pathColor;
+
     private void Start()
     {
         generateMap();
@@ -41,6 +50,30 @@ public class MapGenerator : MonoBehaviour
         return edgeTiles;
     }
 
+    private void moveDown()
+    {
+        pathTiles.Add(currentTile);
+        currentIndex = mapTiles.IndexOf(currentTile);
+        nextIndex = currentIndex-mapWidth;
+        currentTile = mapTiles[nextIndex];
+    }
+
+    private void moveLeft()
+    {
+        pathTiles.Add(currentTile);
+        currentIndex = mapTiles.IndexOf(currentTile);
+        nextIndex = currentIndex-1;
+        currentTile = mapTiles[nextIndex];
+    }
+
+    private void moveRight()
+    {
+        pathTiles.Add(currentTile);
+        currentIndex = mapTiles.IndexOf(currentTile);
+        nextIndex = currentIndex+1;
+        currentTile = mapTiles[nextIndex];
+    }
+
 
     private void generateMap()
     {
@@ -64,5 +97,53 @@ public class MapGenerator : MonoBehaviour
 
         int rand1 = Random.Range(0, mapWidth);
         int rand2 = Random.Range(0, mapWidth);
+
+        startTile = topEdgeTiles[rand1];
+        endTile = bottomEdgeTiles[rand2];
+
+        currentTile = startTile;
+
+        moveDown();
+
+        int loopCount = 0;
+
+        while (reachedX == false) // note to self: reachedX == false is the same as !reachedX
+        {
+            loopCount ++;
+            if (loopCount > 100)
+            {
+                Debug.Log("Loop count went too long so i eliminated it :3!!!!");
+                break;
+            }
+            if (currentTile.transform.position.x > endTile.transform.position.x)
+            {
+                moveLeft();
+            }
+            else if (currentTile.transform.position.x < endTile.transform.position.x)
+            {
+                moveRight();
+            }
+        }
+        
+        while (reachedY == false)
+        {
+            if(currentTile.transform.position.y > endTile.transform.position.y)
+            {
+                moveDown();
+            }
+            else
+            {
+                reachedY = true;
+            }
+
+        }
+
+        pathTiles.Add(endTile);
+
+        foreach(GameObject obj in pathTiles)
+        {
+            obj.GetComponent<SpriteRenderer>().color = pathColor;
+        }
+
     }
 }
