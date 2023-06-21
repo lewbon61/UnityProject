@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Tower : MonoBehaviour
 {
     [SerializeField] private float range;
     [SerializeField] private float damage;
@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     private float nextTimeToShoot;
 
-    private GameObject currentTarget;
+    public GameObject currentTarget;
 
     private void start()
     {
@@ -25,12 +25,15 @@ public class NewBehaviourScript : MonoBehaviour
 
         foreach(GameObject enemy in Enemies.enemies)
         {
-            float _distance = (transform.position - enemy.transform.position).magnitude;
-
-            if (_distance < distance)
+            if (enemy != null)
             {
-                distance = _distance;
-                currentNearestEnemy = enemy;
+                float _distance = (transform.position - enemy.transform.position).magnitude;
+
+                if (_distance < distance)
+                {
+                    distance = _distance;
+                    currentNearestEnemy = enemy;
+                }
             }
         }
 
