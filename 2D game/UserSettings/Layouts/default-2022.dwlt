@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1486
     height: 809
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 338
     height: 759
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -338,9 +338,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 72600000
-    m_LastClickedID: 24690
-    m_ExpandedIDs: 000000006260000000ca9a3b
+    m_SelectedIDs: 74600000
+    m_LastClickedID: 24692
+    m_ExpandedIDs: 000000006460000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -368,7 +368,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000062600000
+    m_ExpandedIDs: 0000000064600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,7 +510,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: cec1ffffd8c1ffff14fbffff
+      m_ExpandedIDs: dcbdffffe6bdffff06d3ffff14fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -624,7 +624,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25}
+      snapOffset: {x: 0, y: 26}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -903,9 +903,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.482349, y: 6.405158, z: -0.03210365}
+    m_Target: {x: 9.5696125, y: 6.253125, z: -0.042515665}
     speed: 2
-    m_Value: {x: 4.482349, y: 6.405158, z: -0.03210365}
+    m_Value: {x: 9.225069, y: 6.288032, z: -0.03989118}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -955,9 +955,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.1284738
+    m_Target: 6.0946183
     speed: 2
-    m_Value: 5.1284738
+    m_Value: 5.8321705
   m_Ortho:
     m_Target: 1
     speed: 2
