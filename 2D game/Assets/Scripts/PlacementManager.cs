@@ -13,6 +13,7 @@ public class PlacementManager : MonoBehaviour
     public Camera cam;
 
     public LayerMask mask;
+    public LayerMask towerMask;
 
     public bool isBuilding;
 
@@ -46,6 +47,38 @@ public class PlacementManager : MonoBehaviour
         }
     }
 
+    public bool CheckForTower()
+    {
+        bool towerOnSlot = false;
+
+        Vector2 mousePosition = GetMousePosition();
+
+        RaycastHit2D hit = Physics2D.Raycast(mousePosition,new Vector2(0,0),0.1f, towerMask, -100, 100);
+
+        if (hit.collider != null)
+        {
+            towerOnSlot = true;
+        }
+
+        return towerOnSlot;
+    }
+
+
+    public void PlaceBuilding()
+    {
+        if (hoverTile != null)
+        {
+            if (CheckForTower() == false)
+            {
+                GameObject newTowerObject = Instantiate(basicTowerObject);
+                newTowerObject.layer = LayerMask.NameToLayer("Tower");
+                newTowerObject.transform.position = hoverTile.transform.position;
+
+                EndBuilding();
+            }
+        }
+    }
+
     public void StartBuilding()
     {
         isBuilding = true;
@@ -63,9 +96,14 @@ public class PlacementManager : MonoBehaviour
         }
     }
 
-    public void endBuilding()
+    public void EndBuilding()
     {
         isBuilding = false;
+
+        if (dummyPlacement != null)
+        {
+            Destroy(dummyPlacement);
+        }
     }
 
 
@@ -77,7 +115,15 @@ public class PlacementManager : MonoBehaviour
             {
                 GetCurrentHoverTile();
 
-                dummyPlacement.transform.position = hoverTile.transform.position;
+                if (hoverTile != null)
+                {
+                    dummyPlacement.transform.position = hoverTile.transform.position;
+                }
+            }
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                PlaceBuilding();
             }
         }
         

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5258045076357575202}
   - component: {fileID: 4233352708092131493}
   - component: {fileID: 6568715124070708637}
-  m_Layer: 0
+  - component: {fileID: 3266621623478981927}
+  m_Layer: 7
   m_Name: TowerBasic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,6 +122,51 @@ MonoBehaviour:
   pivot: {fileID: 1117922477209788304}
   barrel: {fileID: 5153162728320307315}
   tower: {fileID: 4233352708092131493}
+--- !u!61 &3266621623478981927
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323496406876028093}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2799131910706666933
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +176,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117922477209788304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5153162728320307315}
   - component: {fileID: 2788212832355229941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
