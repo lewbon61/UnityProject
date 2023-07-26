@@ -1,14 +1,18 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - BarrelRotation
+    - BasicTower
+    - Bullet
     - Enemies
     - Enemy
     - MapGenerator
+    - MoneyManager
+    - PlacementManager
     - RoundController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -18,7 +22,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -51,6 +54,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 81
@@ -60,11 +65,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2594}
     - Class: 114
+      Script: {instanceID: 3234}
+    - Class: 114
       Script: {instanceID: 3260}
     - Class: 114
       Script: {instanceID: 4004}
     - Class: 114
-      Script: {instanceID: 4854}
+      Script: {instanceID: 4434}
+    - Class: 114
+      Script: {instanceID: 4856}
+    - Class: 114
+      Script: {instanceID: 7310}
+    - Class: 114
+      Script: {instanceID: 8098}
+    - Class: 114
+      Script: {instanceID: 9462}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -492,6 +507,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
+      Hash: 6d19a1f78dce790d24ee499adaeaadb7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlacementManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -828,6 +849,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
+      Hash: dd5ab42f2ec5d091540130fc440d6d54
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MoneyManager
+  - hash:
+      serializedVersion: 2
       Hash: f4f39b64f410b0cd98b49df4bad0eb7e
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -1020,6 +1047,12 @@ ScriptsOnlyBuild:
     className: PixelPerfectCamera
   - hash:
       serializedVersion: 2
+      Hash: d6c07e78514c37ee5cab2f543e95fee5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShopManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1111,4 +1144,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/UnityProject/2D game/Builds/more wrinkles, less old men/2D game.exe
+  playerPath: D:/UnityProject/2D game/Builds/minimum, wrinkles, man/2D game.exe

@@ -26,5 +26,6 @@ public class MoneyManager : MonoBehaviour
     public void RemoveMoney(int amount)
     {
         currentPlayerMoney -= amount;
+        Debug.Log("Yoinked " + amount + " from player's wallet! Player now has " + currentPlayerMoney);
     }
 }

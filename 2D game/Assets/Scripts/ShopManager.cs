@@ -22,6 +22,11 @@ public class ShopManager : MonoBehaviour
         return cost;
     }
 
+    public void BuyTower(GameObject towerPrefab)
+    {
+        moneyManager.RemoveMoney(GetTowerCost(towerPrefab));
+    }
+
     public bool CanBuyTower(GameObject towerPrefab)
     {
         int cost = GetTowerCost(towerPrefab);

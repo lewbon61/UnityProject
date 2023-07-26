@@ -326,7 +326,10 @@
 "Assets/Scripts/Enemies.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/MapGenerator.cs"
+"Assets/Scripts/MoneyManager.cs"
+"Assets/Scripts/PlacementManager.cs"
 "Assets/Scripts/RoundController.cs"
+"Assets/Scripts/ShopManager.cs"
 "Assets/Scripts/Tower.cs"
 -langversion:9.0
 
