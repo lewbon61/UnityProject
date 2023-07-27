@@ -24,7 +24,7 @@ public class PlacementManager : MonoBehaviour
 
     public void Start()
     {
-        StartBuilding();
+        
     }
 
 
