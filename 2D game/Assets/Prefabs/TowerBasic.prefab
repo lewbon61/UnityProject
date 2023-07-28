@@ -34,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 1117922477209788304}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5258045076357575202
 SpriteRenderer:
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: 0e26ad4ed26139242863a1a6c03d92b5, type: 3}
-  m_Color: {r: 0, g: 0.7629006, b: 1, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

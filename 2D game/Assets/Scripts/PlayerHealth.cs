@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private float currentPlayerHealth;
+    [SerializeField] private float currentPlayerHealth;
 
     public float startingHealth;
 
-    public void ResetPlayerHralth()
+    public void Start()
+    {
+        ResetPlayerHealth();
+    }
+
+    public void ResetPlayerHealth()
     {
         currentPlayerHealth = startingHealth;
     }

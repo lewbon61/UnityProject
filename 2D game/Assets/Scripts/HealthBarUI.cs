@@ -9,8 +9,11 @@ public class HealthBarUI : MonoBehaviour
 
     public Image healthBarBar;
 
+    public Text healthText;
+
     public void Update()
     {
         healthBarBar.fillAmount = playerHealth.GetCurrentPlayerHealth() / playerHealth.startingHealth;
+        healthText.text = "Health: " + Mathf.Floor(playerHealth.GetCurrentPlayerHealth()) + "/" + playerHealth.startingHealth;
     }
 }
