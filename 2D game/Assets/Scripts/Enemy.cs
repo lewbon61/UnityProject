@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public MoneyManager moneyManager;
+   
     [SerializeField]
     private float enemyHealth;
 
     [SerializeField]
     private float movementSpeed;
 
+    [SerializeField]
     private int killReward;
+
+
     private int damage;
 
     private GameObject targetTile;
@@ -45,6 +50,7 @@ public class Enemy : MonoBehaviour
     {  
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
+        moneyManager.AddMoney(killReward);
     }
 
     private void moveEnemy()
