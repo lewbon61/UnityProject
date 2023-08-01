@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public MoneyManager moneyManager;
    
     [SerializeField]
     private float enemyHealth;
@@ -15,10 +14,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int killReward;
 
-
     private int damage;
 
     private GameObject targetTile;
+
+    //public GameObject moneyManager;
+
 
     private void Awake()
     {
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
         if (enemyHealth <= 0)
         {
             die();
+            //moneyManager.AddMoney().currentPlayerMoney += killReward;
         }
     }
 
@@ -50,7 +52,7 @@ public class Enemy : MonoBehaviour
     {  
         Enemies.enemies.Remove(gameObject);
         Destroy(transform.gameObject);
-        moneyManager.AddMoney(killReward);
+        
     }
 
     private void moveEnemy()

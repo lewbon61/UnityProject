@@ -256,6 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   starterMoney: 150
+  enemies: {fileID: 1184965574}
 --- !u!4 &242640762
 Transform:
   m_ObjectHideFlags: 0

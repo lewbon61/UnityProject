@@ -8,6 +8,10 @@ public class MoneyManager : MonoBehaviour
 
     public int starterMoney;
 
+    public GameObject enemies;
+
+    
+
     public void Start()
     {
         currentPlayerMoney = starterMoney;
