@@ -101,6 +101,9 @@ MonoBehaviour:
   enemyHealth: 100
   movementSpeed: 0.5
   killReward: 50
+  damage: 10
+  moneyManager: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!61 &4134181127452184560
 BoxCollider2D:
   m_ObjectHideFlags: 0

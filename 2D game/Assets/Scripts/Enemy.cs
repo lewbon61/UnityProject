@@ -14,11 +14,14 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private int killReward;
 
+    [SerializeField]
     private int damage;
 
     private GameObject targetTile;
+ 
+    public GameObject moneyManager;
 
-    //public GameObject moneyManager;
+    public GameObject playerHealth;
 
 
     private void Awake()
@@ -29,6 +32,8 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         initializeEnemy();
+        moneyManager = GameObject.Find("MoneyManager");
+        playerHealth = GameObject.Find("PlayerHealth");
     }
 
     private void initializeEnemy()
@@ -44,7 +49,7 @@ public class Enemy : MonoBehaviour
         if (enemyHealth <= 0)
         {
             die();
-            //moneyManager.AddMoney().currentPlayerMoney += killReward;
+            moneyManager.GetComponent<MoneyManager>().AddMoney(killReward);
         }
     }
 
@@ -71,7 +76,15 @@ public class Enemy : MonoBehaviour
                     int currentIndex = MapGenerator.pathTiles.IndexOf(targetTile);
 
                     targetTile = MapGenerator.pathTiles[currentIndex + 1];
+                    //Debug.Log("Yippee");
                 }
+                
+            }
+
+            else if (targetTile = MapGenerator.endTile)
+            {
+                die();
+                playerHealth.GetComponent<PlayerHealth>().DamagePlayer(damage);
             }
     }
 
