@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour
 
     public float startingHealth;
 
+
     public void Start()
     {
         ResetPlayerHealth();
@@ -21,11 +22,19 @@ public class PlayerHealth : MonoBehaviour
     public void DamagePlayer(float amt)
     {
         currentPlayerHealth -= amt;
+
+        if (currentPlayerHealth <= 0)
+        {
+            currentPlayerHealth = 0;
+            Debug.Log("YOU ARE DIE");
+        }
     }
 
     public float GetCurrentPlayerHealth()
     {
         return currentPlayerHealth;
     }
+
+
 
 }

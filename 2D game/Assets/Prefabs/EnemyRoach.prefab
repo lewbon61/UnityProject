@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
-  movementSpeed: 0.5
+  movementSpeed: 10
   killReward: 50
   damage: 10
   moneyManager: {fileID: 0}
