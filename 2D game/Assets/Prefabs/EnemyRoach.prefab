@@ -101,7 +101,7 @@ MonoBehaviour:
   enemyHealth: 100
   movementSpeed: 10
   killReward: 50
-  damage: 10
+  damage: 50
   moneyManager: {fileID: 0}
   playerHealth: {fileID: 0}
 --- !u!61 &4134181127452184560
