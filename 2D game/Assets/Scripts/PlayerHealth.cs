@@ -7,13 +7,15 @@ public class PlayerHealth : MonoBehaviour
 {
     //public static event Action OnPlayerDeath;
 
-    [SerializeField] private float currentPlayerHealth;
+    [SerializeField] public float currentPlayerHealth;
 
     public float startingHealth;
 
     private bool isDead;
 
     public GameOverManager gameOverManager;
+
+    public RoundController roundController;
 
     public void Start()
     {
@@ -32,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
         if (currentPlayerHealth <= 0 && !isDead)
         {
             isDead = true;
+            
             currentPlayerHealth = 0;
             Debug.Log("YOU ARE DIE");
             gameOverManager.gameOver();

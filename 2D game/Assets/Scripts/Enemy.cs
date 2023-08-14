@@ -85,6 +85,7 @@ public class Enemy : MonoBehaviour
             {
                 die();
                 playerHealth.GetComponent<PlayerHealth>().DamagePlayer(damage);
+
             }
     }
 

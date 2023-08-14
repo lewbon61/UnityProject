@@ -14,14 +14,18 @@ public class RoundController : MonoBehaviour
     public bool isRoundGoing;
     public bool isIntermission;
     public bool isStartOfRound;
+    //public bool isGameOver;
 
     public int round;
+
+    //public GameObject playerHealth;
 
     private void Start()
     {
         isRoundGoing = false;
         isIntermission = false;
         isStartOfRound = true;
+        //isGameOver = false;
 
         timeVariable = Time.time + timeBeforeRoundStarts;
 
@@ -50,6 +54,7 @@ public class RoundController : MonoBehaviour
             {
                 isStartOfRound = false;
                 isRoundGoing = true;
+                //isGameOver = false;
 
                 SpawnEnemies();
                 return;
@@ -61,6 +66,7 @@ public class RoundController : MonoBehaviour
             {
                 isIntermission = false;
                 isRoundGoing = true;
+                //isGameOver = false;
 
                 SpawnEnemies();
             }
@@ -71,15 +77,27 @@ public class RoundController : MonoBehaviour
             {
 
             }
+            //else if(playerHealth.GetComponent<PlayerHealth>().GetCurrentPlayerHealth(currentPlayerHealth <= 0))
+           // {
+                //isGameOver = true;
+                //isRoundGoing = false;
+                //isIntermission = false;
+            //}
+            
             else
             {
                 isIntermission = true;
                 isRoundGoing = false;
+                //isGameOver = false;
 
                 timeVariable = Time.time + timeBetweenWaves;
 
                 round++;
             }
         }
+        //else if (isGameOver)
+        //{
+            //basicEnemy.SetActive(false);
+        //}
     }
 }
