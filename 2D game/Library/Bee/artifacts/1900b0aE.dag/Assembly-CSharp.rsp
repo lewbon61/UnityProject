@@ -379,6 +379,7 @@
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/GameOverManager.cs"
 "Assets/Scripts/HealthBarUI.cs"
+"Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MapGenerator.cs"
 "Assets/Scripts/MoneyManager.cs"
 "Assets/Scripts/MoneyTextUI.cs"

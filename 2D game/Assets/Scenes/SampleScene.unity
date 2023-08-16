@@ -791,7 +791,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Or don't
+  m_Text: NO MORE PLS
 --- !u!222 &511034090
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1418,8 +1418,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basicEnemy: {fileID: 8791502133524069724, guid: c42959edf5fbe03478d8bd78afc78c89, type: 3}
-  timeBetweenWaves: 5
-  timeBeforeRoundStarts: 10
+  timeBetweenWaves: 1
+  timeBeforeRoundStarts: 1
   timeVariable: 0
   isRoundGoing: 0
   isIntermission: 0
@@ -2534,6 +2534,7 @@ MonoBehaviour:
   currentPlayerHealth: 50
   startingHealth: 100
   gameOverManager: {fileID: 520845808}
+  roundController: {fileID: 0}
 --- !u!4 &2039258341
 Transform:
   m_ObjectHideFlags: 0

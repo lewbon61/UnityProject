@@ -14,6 +14,9 @@ public class GameOverManager : MonoBehaviour
 
     public void restart()
     {
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+       // Resources.UnloadUnusedAssets();
+        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Restart");
     }
