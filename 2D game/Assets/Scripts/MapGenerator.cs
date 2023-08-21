@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class MapGenerator : MonoBehaviour
 {
+    private void Awake()
+{
+    return;
+   // DontDestroyOnLoad();
+}    
+    //public string mapID;
+    
     public GameObject MapTile;
 
     [SerializeField] private int mapWidth;
@@ -23,6 +30,7 @@ public class MapGenerator : MonoBehaviour
     private int nextIndex;
 
     public Color pathColor;
+
 
     public Color startColor;
     public Color endColor;
@@ -81,12 +89,14 @@ public class MapGenerator : MonoBehaviour
     }
 
 
+
     private void generateMap()
     {
         for (int y = 0; y < mapHeight; y++)
         {
             for (int x = 0; x < mapWidth; x++)
             {
+
                 GameObject newTile = Instantiate(MapTile);
 
                 mapTiles.Add(newTile);
@@ -120,9 +130,10 @@ public class MapGenerator : MonoBehaviour
                 Debug.Log("Loop count went too long so i eliminated it");
                 break;
             }
+           
             if (currentTile.transform.position.x > endTile.transform.position.x)
-            {
-                moveLeft();
+            {   
+                  moveLeft();
             }
             else if (currentTile.transform.position.x < endTile.transform.position.x)
             {
