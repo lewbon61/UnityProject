@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 5
-  damage: 25
+  damage: 20
   timeBetweenShots: 1
   currentTarget: {fileID: 0}
   pivot: {fileID: 8188719175177050167}

@@ -8,7 +8,11 @@ public class ShopManager : MonoBehaviour
 
     public GameObject TowerBasicPrefab;
 
+    public GameObject SMGRat;
+
     public int basicTowerCost;
+
+    public int smgRatCost;
 
     public int GetTowerCost(GameObject towerPrefab)
     {
@@ -19,8 +23,16 @@ public class ShopManager : MonoBehaviour
             cost = basicTowerCost;
         }
 
+        if (towerPrefab == SMGRat)
+        {
+            cost = smgRatCost;
+        }
+
         return cost;
     }
+
+
+
 
     public void BuyTower(GameObject towerPrefab)
     {

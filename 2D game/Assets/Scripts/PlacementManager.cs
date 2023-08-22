@@ -8,6 +8,10 @@ public class PlacementManager : MonoBehaviour
 
     public GameObject basicTowerObject;
 
+    public GameObject smgRatObject;
+
+    public GameObject placingPath;
+
     private GameObject currentTowerPlacing;
 
     private GameObject dummyPlacement;
@@ -97,7 +101,7 @@ public class PlacementManager : MonoBehaviour
         isBuilding = true;
 
         currentTowerPlacing = towerToBuild;
-        dummyPlacement = Instantiate(basicTowerObject);
+        dummyPlacement = Instantiate(placingPath);
 
         if (dummyPlacement.GetComponent<Tower>() != null)
         {

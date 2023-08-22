@@ -7,6 +7,10 @@ public class RoundController : MonoBehaviour
 
     public GameObject basicEnemy;
 
+    public GameObject speedRoach;
+
+    //public Enemies enemies;
+
     public float timeBetweenWaves;
     public float timeBeforeRoundStarts;
     public float timeVariable;
