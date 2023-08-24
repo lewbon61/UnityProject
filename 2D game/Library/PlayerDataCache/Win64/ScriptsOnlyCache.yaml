@@ -6,13 +6,20 @@ ScriptsOnlyBuild:
     - Bullet
     - Enemies
     - Enemy
+    - GameOverManager
+    - HealthBarUI
+    - MainMenu
     - MapGenerator
     - MoneyManager
+    - MoneyTextUI
     - PlacementManager
+    - PlayerHealth
     - RoundController
+    - ShopManager
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
+    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.SpriteSkinComposite
     - UnityEngine.U2D.Animation.SpriteSkinUpdateHelper
     Unity.2D.IK.Editor.dll:
@@ -22,6 +29,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.GridBrushEditor
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -38,9 +46,96 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-  serializedClasses: {}
-  methodsToPreserve: []
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
+  serializedClasses:
+    UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
+    - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
+    UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.FontData
+    - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: playGame
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenu
+    methodName: quit
+  - assembly: Assembly-CSharp
+    fullTypeName: GameOverManager
+    methodName: quit
+  - assembly: Assembly-CSharp
+    fullTypeName: GameOverManager
+    methodName: quit
+  - assembly: Assembly-CSharp
+    fullTypeName: PlacementManager
+    methodName: StartBuilding
+  - assembly: Assembly-CSharp
+    fullTypeName: PlacementManager
+    methodName: StartBuilding
   sceneClasses:
+    Assets/Scenes/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1592}
+    - Class: 114
+      Script: {instanceID: 2818}
+    - Class: 114
+      Script: {instanceID: 3062}
+    - Class: 114
+      Script: {instanceID: 3404}
+    - Class: 114
+      Script: {instanceID: 5050}
+    - Class: 114
+      Script: {instanceID: 6194}
+    - Class: 114
+      Script: {instanceID: 6566}
+    - Class: 114
+      Script: {instanceID: 7168}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -63,24 +158,50 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 1592}
+    - Class: 114
       Script: {instanceID: 2594}
     - Class: 114
-      Script: {instanceID: 3234}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3260}
+      Script: {instanceID: 2916}
     - Class: 114
-      Script: {instanceID: 4004}
+      Script: {instanceID: 3062}
     - Class: 114
-      Script: {instanceID: 4434}
+      Script: {instanceID: 3236}
     - Class: 114
-      Script: {instanceID: 4856}
+      Script: {instanceID: 3262}
     - Class: 114
-      Script: {instanceID: 7310}
+      Script: {instanceID: 3404}
     - Class: 114
-      Script: {instanceID: 8098}
+      Script: {instanceID: 4006}
     - Class: 114
-      Script: {instanceID: 9462}
+      Script: {instanceID: 4436}
+    - Class: 114
+      Script: {instanceID: 4858}
+    - Class: 114
+      Script: {instanceID: 5534}
+    - Class: 114
+      Script: {instanceID: 6194}
+    - Class: 114
+      Script: {instanceID: 6566}
+    - Class: 114
+      Script: {instanceID: 7168}
+    - Class: 114
+      Script: {instanceID: 7316}
+    - Class: 114
+      Script: {instanceID: 7734}
+    - Class: 114
+      Script: {instanceID: 8106}
+    - Class: 114
+      Script: {instanceID: 8804}
+    - Class: 114
+      Script: {instanceID: 9338}
+    - Class: 114
+      Script: {instanceID: 9472}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -89,6 +210,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -273,6 +400,12 @@ ScriptsOnlyBuild:
     className: UnityMessageListener
   - hash:
       serializedVersion: 2
+      Hash: d1f7ff0b1e2e3de321f8d8a1bdc467f1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HealthBarUI
+  - hash:
+      serializedVersion: 2
       Hash: 433dc5dbeff082285ab19d7d1b927f2c
     assemblyName: Unity.2D.Tilemap.Extras
     namespaceName: UnityEngine.Tilemaps
@@ -351,7 +484,7 @@ ScriptsOnlyBuild:
     className: UnityOnDropdownValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 2eea43121e1d403a1d3fcac9cec3a6cc
+      Hash: 624ca3916aa6fad5474bda19dbe661f5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Enemy
@@ -465,7 +598,7 @@ ScriptsOnlyBuild:
     className: UnityOnCollisionExit2DMessageListener
   - hash:
       serializedVersion: 2
-      Hash: c55829a2284934b5b8cd552bfb8abd31
+      Hash: 5de757287506c36085079d415037b7cd
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RoundController
@@ -507,7 +640,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 6d19a1f78dce790d24ee499adaeaadb7
+      Hash: fb5a068cfedb30bb645b9c44a87db9d4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlacementManager
@@ -604,6 +737,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerClickMessageListener
@@ -637,6 +776,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 1f5441a968002f4afef260b297506e81
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlayerHealth
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -897,6 +1042,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 0821992913be0bac1b6165d3296a487d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameOverManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1047,7 +1198,7 @@ ScriptsOnlyBuild:
     className: PixelPerfectCamera
   - hash:
       serializedVersion: 2
-      Hash: d6c07e78514c37ee5cab2f543e95fee5
+      Hash: d1789c6fd6091d5445e2d7eb74daed41
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ShopManager
@@ -1107,6 +1258,12 @@ ScriptsOnlyBuild:
     className: UnityOnToggleValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: c5e9dde4c819210d9759790c947f3c4d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MoneyTextUI
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1143,5 +1300,6 @@ ScriptsOnlyBuild:
     className: BasicTower
   platform: 19
   scenePathNames:
+  - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/UnityProject/2D game/Builds/minimum, wrinkles, man/2D game.exe
+  playerPath: D:/UnityProject/2D game/Builds/rat kill roach TD/2D game.exe
